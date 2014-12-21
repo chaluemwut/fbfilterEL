@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "FB Filter Evaluator",
+  "description": "Filter message for measurement credibility on facebook",
+  "version": "1.1",
+
+  "content_scripts": [
+  {
+    "matches": ["https://www.facebook.com/*"],
+    "css": ["fbcredibility.css"],
+    "js": ["jquery.js", "fbcredibility.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "https://www.facebook.com/",
+    "https://www.fbcredibility.com:8080/*",
+    "https://www.sdc.com/sdc/*",
+    "http://127.0.0.1:9090/*"
+  ],
+  "web_accessible_resources": [
+      "jquery/images/*",
+      "rating2.png"
+  ]  
+}
